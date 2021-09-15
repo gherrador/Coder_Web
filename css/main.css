@@ -1,0 +1,565 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 2.5fr;
+    grid-template-rows: 1fr 53px;
+    background-color: #bd3133;
+}
+
+.encabezado {
+    height: 280px;
+    width: 100%;
+}
+
+.encabezado__logo {
+    padding-top: 2%;
+    padding-left: 30px;
+    margin-top: 30px;
+    grid-row: 1/3;
+    align-self: center;
+}
+
+.titulo__pagina {
+    font-family: 'hollow';
+    color: white;
+    font-size: 65px;
+    grid-column: 2/3;
+    margin-left: 50px;
+    grid-row: 1/2;
+}
+
+
+/* menu navbar del header*/
+
+.menu {
+    text-align: end;
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+.menu ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu ul li {
+    float: left;
+    background: #959595;
+    background: -moz-linear-gradient(top, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%);
+    background: -webkit-linear-gradient(top, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%);
+    background: linear-gradient(to bottom, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b', GradientType=0);
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 15px;
+    font-family: 'oswald';
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: #ffdb0e;
+    animation: 1s ms 1;
+}
+
+@keyframes ms {
+    0% {
+        filter: opacity(0.5);
+        transform: scale(1.1);
+    }
+}
+
+.barra {
+    color: rgb(156, 156, 156);
+    padding: 9.5px;
+}
+
+
+/* secciones principales de la pagina index */
+
+#seccionesprincipales {
+    margin-top: 50px;
+    width: 95%;
+    height: 650px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 0.8fr 1r;
+    grid-column-gap: 50px;
+    align-content: center;
+    grid-row-gap: 30px;
+}
+
+.tokio {
+    border: 1px solid black;
+    height: 560px;
+    width: 750px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.tokio img {
+    height: 100%;
+    width: 100%;
+}
+
+.tokio__titulo {
+    font-family: 'cabin';
+    margin-top: -150px;
+    font-size: 40px;
+    padding-left: 40px;
+    color: white;
+}
+
+.tokio:hover {
+    backface-visibility: hidden;
+    animation: 1s ms 1;
+}
+
+.recomendados {
+    border: 1px solid black;
+    height: 260px;
+    width: 320px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.recomendados img {
+    height: 100%;
+    width: 100%;
+}
+
+.recomendados__titulo {
+    font-family: 'cabin';
+    margin-top: -60px;
+    font-size: 20px;
+    margin-left: 50px;
+    color: white;
+}
+
+.recomendados:hover {
+    backface-visibility: hidden;
+    animation: 1s ms 1;
+}
+
+.noticias {
+    border: 1px solid black;
+    height: 260px;
+    width: 320px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.noticias img {
+    height: 100%;
+    width: 100%;
+}
+
+.noticias__titulo {
+    font-family: 'cabin';
+    margin-top: -60px;
+    font-size: 20px;
+    color: white;
+    margin-left: 30px;
+}
+
+.noticias:hover {
+    backface-visibility: hidden;
+    animation: 1s ms 1;
+}
+
+.Comidas {
+    border: 1px solid black;
+    height: 260px;
+    width: 320px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.Comidas img {
+    height: 100%;
+    width: 100%;
+}
+
+.Comidas__titulo {
+    font-family: 'cabin';
+    margin-top: -60px;
+    font-size: 20px;
+    color: white;
+    margin-left: 40px;
+}
+
+.Comidas:hover {
+    backface-visibility: hidden;
+    animation: 1s ms 1;
+}
+
+.Info {
+    border: 1px solid black;
+    height: 260px;
+    width: 320px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.Info img {
+    height: 100%;
+    width: 100%;
+}
+
+.Info__titulo {
+    font-family: 'cabin';
+    margin-top: -60px;
+    font-size: 20px;
+    color: white;
+    margin-left: 45px;
+}
+
+.Info:hover {
+    backface-visibility: hidden;
+    animation: 1s ms 1;
+}
+
+
+/* Seccion planifica tu viaje */
+
+#planifica {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
+    grid-column-gap: 50px;
+}
+
+.planifica__titulo {
+    font-family: 'pokesolid';
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    grid-row: 1/2;
+    grid-column: 1/5;
+}
+
+.reservas {
+    width: 250px;
+    height: 250px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.reservas img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.reservas__titulo {
+    font-size: 20px;
+    font-family: 'cabin';
+    margin-top: -90px;
+    color: white;
+    width: 200px;
+    text-align: center;
+    padding-left: 45px;
+}
+
+.reservas:hover {
+    backface-visibility: hidden;
+    animation: 1s ms 1;
+}
+
+.JRPass {
+    width: 250px;
+    height: 250px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.JRPass img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.JRPass__titulo {
+    font-size: 20px;
+    font-family: 'cabin';
+    margin-top: -75px;
+    color: white;
+    width: 200px;
+    text-align: center;
+    padding-left: 45px;
+}
+
+.JRPass:hover {
+    backface-visibility: hidden;
+    animation: 1s ms 1;
+}
+
+.Vuelos {
+    width: 250px;
+    height: 250px;
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+.Vuelos img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.Vuelos__titulo {
+    font-size: 20px;
+    font-family: 'cabin';
+    margin-top: -75px;
+    color: white;
+    width: 200px;
+    text-align: center;
+    padding-left: 45px;
+}
+
+.Vuelos:hover {
+    backface-visibility: hidden;
+    animation: 1s ms 1;
+}
+
+.Souvenirs {
+    width: 250px;
+    height: 250px;
+    grid-row: 2/3;
+    grid-column: 4/5;
+}
+
+.Souvenirs img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.Souvenirs__titulo {
+    font-size: 20px;
+    font-family: 'cabin';
+    margin-top: -75px;
+    color: white;
+    width: 200px;
+    text-align: center;
+    padding-left: 45px;
+}
+
+.Souvenirs:hover {
+    backface-visibility: hidden;
+    animation: 1s ms 1;
+}
+
+
+/* footer de la pagina */
+
+.footer {
+    height: 100px;
+    background-color: #bd3135;
+    grid-row: 4/5;
+}
+
+.footer__leyenda {
+    color: white;
+    font-family: cabin;
+    padding-top: 60px;
+    text-align: end;
+}
+
+
+/* Estilos de la seccion contactenos */
+
+.contactenos-container {
+    width: 35%;
+    height: 100%;
+    border: 1px solid black;
+    margin-left: 500px;
+    margin-top: 3%;
+}
+
+.cuadrante-sup {
+    width: 100%;
+    height: 15%;
+    border: 1px solid black;
+    background-color: #bd3135;
+}
+
+.imagen__contacto {
+    width: 100%;
+    height: 100%;
+    margin-left: -1px;
+}
+
+.cuadrantesup__titulo {
+    text-align: center;
+    font-family: cabin;
+    font-size: 20px;
+    color: white;
+    margin-top: -80px;
+}
+
+.form-group {
+    font-family: cabin;
+    font-size: 15px;
+    text-align: center;
+}
+
+.sexo__enunciado {
+    font-size: 15px;
+    font-family: cabin;
+    text-align: center;
+}
+
+.sexo__opciones {
+    font-size: 15px;
+    font-family: cabin;
+    margin-left: 42%;
+}
+
+.opciones {
+    font-family: cabin;
+    font-size: 13px;
+    margin-left: 1%;
+}
+
+.opciones__titulo {
+    font-family: cabin;
+    font-size: 15px;
+}
+
+.titulo__comentarios {
+    font-family: cabin;
+    font-size: 15px;
+    text-align: center;
+}
+
+.btn-submit {
+    margin-left: 35%;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    color: red;
+}
+
+
+/* Estilos de la seccion Regiones */
+
+.texto-inicio {
+    font-family: pokesolid;
+    margin-left: 35%;
+    margin-top: 1%;
+    font-size: 40px;
+}
+
+.Regiones p {
+    font-family: cabin;
+    font-size: 18px;
+    margin-left: 1%;
+}
+
+.foto-regiones {
+    width: 100%;
+    height: 100%;
+    margin-top: -50px;
+    background-image: url(../img/tours/62022470-mapa-de-japón-sitios-históricos-sobre-preciosa-mapa.jpg);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 80% -9%;
+}
+
+.foto-regiones p {
+    font-family: cabin;
+    width: 40%;
+    height: 40%;
+    margin-top: 10%;
+    margin-left: 5%;
+    line-height: 25px;
+}
+
+table {
+    width: 100%;
+    height: 60%;
+    border: 1px solid black;
+    margin-top: -40px
+}
+
+th {
+    height: 70px;
+    background-color: #bd3133;
+    color: white;
+    font-family: cabin;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #bd3135;
+}
+
+
+/* Idiomas */
+
+.idioma_intro h4 {
+    font-family: 'pokesolid';
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+
+.idioma_intro img {
+    margin-left: 450px;
+}
+
+.idioma_intro p {
+    font-family: cabin;
+    font-size: 15px;
+    text-align: center;
+}
+
+#Idioma {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+}
+
+.Audios img {
+    width: 310px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.videos img {
+    width: 310px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.Libros img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
