@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <title>Bienvenidos a Conociendo Japon!</title>
+</head>
+
+<body>
+    <!-- Header de la pagina -->
+    <header>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-xs-4 col-sm-2 col-lg-2">
+                    <img class="encabezado__logo" src="img/otros/logo.jpg" alt="encabezado" />
+                </div>
+                <div class="col-xs-8 col-sm-10 col-lg-10">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h3 class="titulo__pagina">Conociendo Japon</h3>
+                    </a>
+                </div>
+            </div>
+            <!-- Menu Header-->
+            <div class="row">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="html/quienes_somos.html">Quienes somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/manga_y_anime.html">Manga y Anime</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/regiones.html">Regiones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/idioma.html"> Idioma</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/contacto.html"> Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Secciones principales de la pagina-->
+    <section id="seccionesprincipales">
+        <article class="tokio">
+            <div class="container">
+                <div class="row">
+                    <!-- Carrusel -->
+                    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicadores de carrusel -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        </div>
+                        <!-- Imagenes de carrusel -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/tokio/IMG_20190510_001021299.jpg" alt="Templos" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Conoce los mejores templos de Tokio</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/tokio/images.png" alt="Lugares" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Que ver y conocer de Tokio</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/tokio/main.png" alt="Noche" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3> Salir a tomar y comer algo en Tokio</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Botones de control de carrusel -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="recomendados">
+            <a title="Ciudades" href="html/ciudades.html"><img src="img/ciudades/matsumoto.jpg" alt="Ciudades" /></a>
+            <h3 class="recomendados__titulo">Los mejores lugares para conocer. Guías y más</h3>
+        </article>
+        <article class="noticias">
+            <a title="Noticias" href="html/noticias.html"> <img src="img/noticias/newspapper.jpg" alt="Noticias" /></a>
+            <h3 class="noticias__titulo">Mantenete al dia con las ultimas noticias de Japon</h3>
+        </article>
+        <article class="Comidas">
+            <a title="Comidas" href="html/comidas.html"> <img src="img/comidas/s_sushi-1280x720.jpg" alt="Comidas" /></a>
+            <h3 class="Comidas__titulo">Te presentamos las mejores comidas de Japon</h3>
+        </article>
+        <article class="Info">
+            <a title="Informacion" href="html/info.html"> <img src="img/info/narita-414px.jpg" alt="Informacion" /></a>
+            <h3 class="Info__titulo">Toda la información que necesitas antes de viajar</h3>
+        </article>
+    </section>
+
+    <!-- Secciones planificacion e informacion de viajes-->
+    <div class="container-fluid">
+        <h3 class="planifica__titulo">Elige tu destino y planifica tu viaje</h3>
+        <br><br><br>
+        <div class="row">
+            <br><br><br><br><br><br>
+            <div class="col-3">
+                <article class="reservas">
+                    <a title="Reservas" href="html/reservas.html"> <img src="img/reservas/reservas.jpg" class="img-fluid" alt="Informacion sobre reservas" /></a>
+                    <h5 class="reservas__titulo">Encontra el mejor hotel para vos!</h5>
+                </article>
+            </div>
+            <div class="col-3">
+                <article class="JRPass">
+                    <a title="JRPass" href="html/JRPass.html"> <img src="img/JR Pass/JRPasstienda.jpg" class="img-fluid" alt="Informacion sobre JR Pass" /></a>
+                    <h5 class="JRPass__titulo">Como conseguir tu JR Pass</h5>
+                </article>
+            </div>
+            <div class="col-3">
+                <article class="Vuelos">
+                    <a title="Vuelos" href="html/pasajes.html"> <img src="img/vuelos/japanairlines.jpg" class="img-fluid" alt="Informacion sobre vuelos" /></a>
+                    <h5 class="Vuelos__titulo">Vuelos y mas... aca</h5>
+                </article>
+            </div>
+            <div class="col-3">
+                <article class="Souvenirs">
+                    <a title="Souvenirs" href="html/Souvenirs.html"> <img src="img/souvenirs/110.jpg" class="img-fluid" alt="Informacion sobre souvenirs" /></a>
+                    <h5 class="Souvenirs__titulo">Conoce los mejores recuerdos!</h5>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer de la pagina-->
+    <footer>
+        <section class="footer ">
+            <h4 class="footer__leyenda ">2021 - Conociendo Japon. Todos los derechos reservados</h4>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+</body>
+
+</html>
