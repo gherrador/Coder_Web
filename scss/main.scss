@@ -44,7 +44,7 @@ header {
 
 .titulo__pagina {
     font-family: $letra-titulo;
-    color: white;
+    color: $color-letra-principal;
     font-size: 65px;
     grid-column: 2/3;
     margin-left: 50px;
@@ -97,6 +97,11 @@ header {
     padding: 9.3px;
 }
 
+.barra_index {
+    color: rgb(156, 156, 156);
+    padding: 6.3px;
+}
+
 
 /* secciones principales de la pagina index */
 
@@ -119,16 +124,14 @@ header {
 }
 
 .tokio img {
-    height: 100%;
-    width: 100%;
+    height: $alto - 4px;
+    width: $ancho;
     padding-left: 5px;
 }
 
-.tokio__titulo {
+.tokio h3 {
     font-family: $letra-principal;
-    margin-top: -150px;
-    font-size: 40px;
-    padding-left: 40px;
+    font-size: 25px;
     color: $color-letra-principal;
 }
 
@@ -659,7 +662,7 @@ td {
     font-size: 18px;
 }
 
-.Manga p {
+p {
     padding-left: 25px;
     font-size: 18px;
 }
@@ -830,4 +833,60 @@ td {
     font-size: 18px;
     padding-left: 20px;
     padding-right: 30px;
+}
+
+.tokio_titulo {
+    font-family: $letra-subtitulos;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.Tokio_dias {
+    display: flex;
+    p {
+        padding: 25px;
+        margin-top: 20px;
+    }
+}
+
+.Tokio__inicio {
+    width: $ancho;
+    height: $alto -200px;
+}
+
+.guia_tokio {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 30px;
+    img {
+        grid-column: 2/4;
+        height: 400px;
+        width: 600px;
+        margin-left: 200px;
+        padding: 30px;
+    }
+    ul {
+        grid-column: 2/3;
+    }
+    p {
+        grid-column: 2/3;
+        line-height: 30px;
+        text-align: justify;
+    }
+    h3 {
+        font-size: 30px;
+        font-family: $letra-anunciados;
+        padding: 10px;
+        margin-left: 10px;
+        grid-column: 2/3;
+    }
+    h4 {
+        font-size: 20px;
+        font-family: $letra-anunciados;
+        padding: 10px;
+        margin-left: 10px;
+        grid-column: 2/3;
+    }
 }
