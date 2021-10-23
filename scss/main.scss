@@ -169,6 +169,13 @@ header {
         position: relative;
         width: 250px;
         height: 250px;
+        a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: white;
+            }
+        }
         img {
             width: 17.5vw;
             height: 15vw;
@@ -186,7 +193,6 @@ header {
             font-size: 1.5vw;
             margin-top: -5vw;
             margin-left: 5.5vw;
-            color: white;
         }
     }
 }
@@ -937,6 +943,14 @@ table {
             display: block;
         }
     }
+    footer {
+        h4 {
+            font-size: $contenido + 1vw;
+        }
+    }
+    .conociendo-japon {
+        font-size: $titulos + 2vw;
+    }
 }
 
 @media screen and (max-width: 576px)and (min-width: 200px) {
@@ -1118,9 +1132,9 @@ table {
         }
     }
     #buttonup {
-        width: 8vw;
-        height: 8vw;
-        font-size: 6vw;
+        width: 10vw;
+        height: 10vw;
+        font-size: 8vw;
         bottom: 10vw;
         right: 4vw;
     }
@@ -1256,6 +1270,14 @@ table {
                 width: 70vw;
                 margin-left: 1.5vw;
             }
+        }
+    }
+    .conociendo-japon {
+        font-size: $titulos + 4vw;
+    }
+    footer {
+        h4 {
+            font-size: $contenido + 1vw;
         }
     }
 }
