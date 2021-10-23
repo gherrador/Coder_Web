@@ -1,0 +1,987 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+/* Animaciones */
+@keyframes ms {
+  0% {
+    filter: opacity(0.5);
+    transform: scale(1.1); } }
+
+@keyframes navbar {
+  100% {
+    filter: opacity(0.5);
+    transform: scale(1.1); } }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/* Variables */
+/* Tamaños Tablet */
+html {
+  height: 100%;
+  width: 100%; }
+
+body {
+  width: 100%;
+  height: 100%; }
+
+header {
+  width: 100%;
+  display: flex;
+  background-color: #bd3133; }
+  header a {
+    font-family: "hollow";
+    color: white;
+    font-size: 65px;
+    margin-top: 50px;
+    padding-left: 30px;
+    text-decoration: none; }
+    header a:hover {
+      color: white; }
+  header img {
+    margin: 20px 20px 0px 20px;
+    width: 180px;
+    height: 180px; }
+
+/* secciones principales de la pagina index */
+.conociendo-japon {
+  font-family: "pokesolid";
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  padding: 40px 0px 40px 0px; }
+
+#seccionesprincipales {
+  width: 100%;
+  height: 650px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.3fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-content: center;
+  padding: 0px 20px 20px 20px; }
+  #seccionesprincipales h3 {
+    font-family: "cabin";
+    font-size: 1.2rem;
+    top: 75%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    padding: 5px 40px 0px 40px; }
+  #seccionesprincipales img {
+    height: 250px;
+    width: 360px;
+    transition: all .9s ease; }
+    #seccionesprincipales img:hover {
+      filter: brightness(0.6);
+      transform: scale(1.2); }
+  #seccionesprincipales article {
+    display: block;
+    position: relative; }
+    #seccionesprincipales article div {
+      overflow: hidden; }
+  #seccionesprincipales .tokio {
+    height: 510px;
+    grid-column: 1/2;
+    grid-row: 1/3; }
+    #seccionesprincipales .tokio img {
+      height: 510px;
+      padding-left: 5px;
+      transition: all .9s; }
+  #seccionesprincipales .recomendados {
+    grid-column: 2/3;
+    grid-row: 1/2; }
+  #seccionesprincipales .noticias {
+    grid-column: 3/4;
+    grid-row: 1/2; }
+  #seccionesprincipales .Comidas {
+    grid-column: 2/3;
+    grid-row: 2/3; }
+  #seccionesprincipales .Info {
+    grid-column: 3/4;
+    grid-row: 2/3; }
+
+/* Seccion planifica tu viaje */
+.planifica-titulo {
+  font-family: "pokesolid";
+  font-size: 30px;
+  color: black;
+  text-align: center; }
+
+#planifica {
+  padding-top: 40px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  position: relative; }
+  #planifica .planifica__seccion {
+    width: 250px;
+    height: 250px; }
+    #planifica .planifica__seccion img {
+      width: 250px;
+      height: 250px;
+      border-radius: 100%;
+      align-items: center;
+      justify-content: space-between; }
+      #planifica .planifica__seccion img:hover {
+        backface-visibility: hidden;
+        animation: 1s ms 1; }
+    #planifica .planifica__seccion h5 {
+      font-size: 1.5rem;
+      font-family: "cabin";
+      margin-top: -90px;
+      color: white;
+      width: 200px;
+      text-align: center;
+      padding-left: 45px;
+      position: absolute;
+      text-align: center; }
+
+/* Estilo boton ir arriba */
+#buttonup {
+  width: 50px;
+  height: 50px;
+  background: #bd3133;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: all 300ms ease;
+  transform: scale(0); }
+  #buttonup:hover {
+    transform: scale(1.1);
+    border-color: rgba(0, 0, 0, 0.1); }
+  #buttonup.animate {
+    transform: scale(1); }
+
+/* footer de la pagina */
+footer {
+  height: 100px;
+  background-color: #bd3133;
+  margin-top: 50px; }
+  footer h4 {
+    color: white;
+    font-family: "cabin";
+    padding: 40px 10px 0px 0px;
+    text-align: end;
+    font-size: 15px; }
+
+/* Estilos de la seccion contactenos */
+.contactanos {
+  font-family: "pokesolid";
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  padding: 40px 0px 40px 0px; }
+
+.contactenos-container {
+  width: 550px;
+  height: 750px;
+  border: 1px solid black;
+  margin-left: 500px;
+  margin-top: 3%; }
+  .contactenos-container .cuadrante-sup {
+    width: 100%;
+    height: 15%;
+    border: 1px solid black;
+    background-color: #bd3133; }
+    .contactenos-container .cuadrante-sup .imagen__contacto {
+      width: 100%;
+      height: 100%;
+      margin-left: -1px; }
+    .contactenos-container .cuadrante-sup .cuadrantesup__titulo {
+      text-align: center;
+      font-family: "cabin";
+      font-size: 20px;
+      color: white;
+      margin-top: -80px; }
+  .contactenos-container .form-group {
+    font-family: "cabin";
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 0px 10px 0px; }
+  .contactenos-container .sexo__enunciado {
+    font-size: 15px;
+    font-family: "cabin";
+    text-align: center; }
+  .contactenos-container .sexo__opciones {
+    font-size: 15px;
+    font-family: "cabin";
+    margin-left: 42%; }
+  .contactenos-container .opciones {
+    font-family: "cabin";
+    font-size: 13px;
+    margin-left: 1%; }
+  .contactenos-container .opciones__titulo {
+    font-family: "cabin";
+    font-size: 15px; }
+  .contactenos-container .titulo__comentarios {
+    font-family: "cabin";
+    font-size: 15px;
+    text-align: center; }
+  .contactenos-container .btn-submit {
+    margin-left: 30%;
+    padding: 0px 10px 0px 10px; }
+  .contactenos-container .btn-reset {
+    padding: 0px 10px 0px 10px; }
+  .contactenos-container ::-webkit-input-placeholder {
+    text-align: center;
+    color: red; }
+  .contactenos-container .texttarea {
+    width: 500px;
+    margin-left: 25px; }
+
+/* Estilos de la seccion Regiones */
+.Regiones .texto-inicio {
+  font-family: "pokesolid";
+  margin-left: 35%;
+  margin-top: 1%;
+  font-size: 40px; }
+
+.Regiones p {
+  font-size: 18px;
+  margin-top: 30px; }
+
+.foto-regiones {
+  margin-top: 50px;
+  display: flex;
+  padding-bottom: 50px; }
+  .foto-regiones p {
+    font-size: 18px; }
+  .foto-regiones img {
+    width: 500px;
+    height: 500px; }
+
+table {
+  width: 100%;
+  border: 1px solid black; }
+  table th {
+    text-align: center;
+    height: 70px;
+    background-color: #bd3133;
+    color: white; }
+  table td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #bd3133; }
+
+/* Sección Idioma */
+.idioma_intro h1 {
+  font-family: "pokesolid";
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  padding: 40px 0px 40px 0px; }
+
+.idioma_intro img {
+  margin-left: 350px; }
+
+.idioma_intro p {
+  font-size: 18px;
+  text-align: center; }
+
+#Idioma {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 40px; }
+  #Idioma img {
+    width: 310px;
+    height: 300px;
+    border-radius: 100%; }
+  #Idioma img:hover {
+    animation: 1s aparecer; }
+  #Idioma h3 {
+    font-family: "oswald";
+    padding: 20px 0px 20px 0px; }
+
+/* Seccion quienes somos */
+.nosotros {
+  padding-top: 30px; }
+  .nosotros h1 {
+    font-family: "pokesolid";
+    font-size: 40px;
+    text-align: center; }
+  .nosotros .nosotros_kioto {
+    display: flex;
+    justify-content: space-between; }
+    .nosotros .nosotros_kioto img {
+      width: 500px;
+      height: 500px;
+      padding-right: 20px;
+      margin-left: 5px; }
+    .nosotros .nosotros_kioto div {
+      margin-top: 50px; }
+      .nosotros .nosotros_kioto div p {
+        text-align: center;
+        font-size: 18px; }
+
+/* Seccion manga y anime */
+.mangaanime_title h1 {
+  font-family: "pokesolid";
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 4px;
+  padding: 20px 0px 20px 0px; }
+
+.mangaanime_title p {
+  font-size: 18px;
+  padding: 0px 20px 30px 20px; }
+
+.anime_titulo {
+  font-family: "cabin";
+  font-size: 25px;
+  padding-left: 10px; }
+
+.Anime {
+  padding: 20px 0px 20px 20px;
+  display: flex; }
+  .Anime p {
+    padding-left: 25px;
+    font-size: 18px; }
+  .Anime img {
+    width: 350px;
+    height: 300px; }
+
+.manga_titulo {
+  padding-left: 10px;
+  font-family: "cabin";
+  font-size: 25px; }
+
+.Manga {
+  padding: 20px 0px 20px 20px;
+  display: flex; }
+  .Manga p {
+    padding-left: 25px;
+    font-size: 18px; }
+  .Manga img {
+    width: 350px;
+    height: 300px; }
+
+.animes_recomendados {
+  margin: 100px 0px 20px 0px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "oswald";
+  text-decoration: underline; }
+
+.Jujutsu {
+  padding: 20px 20px 40px 20px; }
+  .Jujutsu p {
+    padding: 0px 20px 0px 20px;
+    font-size: 18px; }
+  .Jujutsu .Jujutsu1 {
+    display: flex; }
+    .Jujutsu .Jujutsu1 img {
+      width: 500px;
+      height: 400px; }
+  .Jujutsu .Jujutsu2 {
+    display: flex;
+    flex-direction: row-reverse; }
+  .Jujutsu img {
+    width: 350px;
+    height: 300px; }
+
+.kimetsu {
+  padding: 20px 20px 40px 20px; }
+  .kimetsu p {
+    font-size: 18px;
+    padding: 0px 20px 0px 20px; }
+  .kimetsu .kimetsu1 {
+    display: flex; }
+  .kimetsu .kimetsu1 img {
+    width: 400px;
+    height: 300px; }
+  .kimetsu .kimetsu2 {
+    display: flex;
+    flex-direction: row-reverse; }
+  .kimetsu .kimetsu2 img {
+    width: 350px;
+    height: 300px; }
+
+.shingeki {
+  padding: 20px 20px 40px 20px; }
+  .shingeki p {
+    font-size: 18px;
+    padding: 0px 20px 0px 20px; }
+  .shingeki .shingeki1 {
+    display: flex; }
+  .shingeki .shingeki1 img {
+    width: 400px;
+    height: 300px; }
+  .shingeki .shingeki2 {
+    display: flex;
+    flex-direction: row-reverse; }
+  .shingeki .shingeki2 img {
+    width: 350px;
+    height: 300px; }
+
+.BokuNoHero {
+  padding: 20px 20px 40px 20px; }
+  .BokuNoHero .Boku {
+    display: flex; }
+    .BokuNoHero .Boku img {
+      width: 500px;
+      height: 400px;
+      padding: 5px; }
+    .BokuNoHero .Boku p {
+      font-size: 18px;
+      padding-left: 20px;
+      padding-right: 30px; }
+
+.TokyoRevengers {
+  padding: 20px 20px 40px 20px; }
+  .TokyoRevengers .TokyoRev {
+    display: flex; }
+  .TokyoRevengers .TokyoRev img {
+    width: 500px;
+    height: 400px;
+    padding: 5px; }
+  .TokyoRevengers .TokyoRev p {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 30px; }
+
+.container-fluid {
+  padding: 0px; }
+  .container-fluid .navbar {
+    padding: 0px; }
+
+.nav-link {
+  color: white !important; }
+
+.nav-link:hover {
+  backface-visibility: hidden;
+  animation: 1s navbar 1; }
+
+.navbar {
+  height: 40px; }
+
+/* Estilo de secciones libros, canales, info, matsuri, comidas, ciudades, recuerdos, vuelos, JRPass, hoteles, tokio */
+.libros-inicio,
+.canales-inicio,
+.info-inicio,
+.matsuri-inicio,
+.comidas-inicio,
+.ciudades-inicio,
+.recuerdos-inicio,
+.vuelos-inicio,
+.JRPass-inicio,
+.hoteles-inicio,
+.tokio-inicio {
+  padding-top: 50px; }
+  .libros-inicio h1,
+  .canales-inicio h1,
+  .info-inicio h1,
+  .matsuri-inicio h1,
+  .comidas-inicio h1,
+  .ciudades-inicio h1,
+  .recuerdos-inicio h1,
+  .vuelos-inicio h1,
+  .JRPass-inicio h1,
+  .hoteles-inicio h1,
+  .tokio-inicio h1 {
+    font-family: "pokesolid";
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0px 40px 0px; }
+  .libros-inicio p,
+  .canales-inicio p,
+  .info-inicio p,
+  .matsuri-inicio p,
+  .comidas-inicio p,
+  .ciudades-inicio p,
+  .recuerdos-inicio p,
+  .vuelos-inicio p,
+  .JRPass-inicio p,
+  .hoteles-inicio p,
+  .tokio-inicio p {
+    padding: 0px 80px 0px 80px; }
+  .libros-inicio img,
+  .canales-inicio img,
+  .info-inicio img,
+  .matsuri-inicio img,
+  .comidas-inicio img,
+  .ciudades-inicio img,
+  .recuerdos-inicio img,
+  .vuelos-inicio img,
+  .JRPass-inicio img,
+  .hoteles-inicio img,
+  .tokio-inicio img {
+    display: block;
+    margin: auto;
+    padding: 20px 0px 40px 0px;
+    width: 500px;
+    height: 460px; }
+
+.libros-informacion,
+.canales-informacion,
+.informacion,
+.informacion-dinero,
+.matsuri-informacion,
+.comidas-informacion,
+.ciudades-informacion,
+.recuerdos-informacion,
+.vuelos-informacion,
+.JRPass-info,
+.tipos-de-hoteles,
+.tokio-informacion {
+  padding: 30px 100px 0px 100px; }
+  .libros-informacion img,
+  .canales-informacion img,
+  .informacion img,
+  .informacion-dinero img,
+  .matsuri-informacion img,
+  .comidas-informacion img,
+  .ciudades-informacion img,
+  .recuerdos-informacion img,
+  .vuelos-informacion img,
+  .JRPass-info img,
+  .tipos-de-hoteles img,
+  .tokio-informacion img {
+    width: 500px;
+    height: 360px;
+    display: block;
+    margin: auto;
+    padding: 20px 0px 20px 0px; }
+  .libros-informacion h2,
+  .canales-informacion h2,
+  .informacion h2,
+  .informacion-dinero h2,
+  .matsuri-informacion h2,
+  .comidas-informacion h2,
+  .ciudades-informacion h2,
+  .recuerdos-informacion h2,
+  .vuelos-informacion h2,
+  .JRPass-info h2,
+  .tipos-de-hoteles h2,
+  .tokio-informacion h2 {
+    text-align: center;
+    padding: 30px 0px 30px 0px;
+    font-family: "oswald";
+    text-decoration: underline; }
+  .libros-informacion h3,
+  .canales-informacion h3,
+  .informacion h3,
+  .informacion-dinero h3,
+  .matsuri-informacion h3,
+  .comidas-informacion h3,
+  .ciudades-informacion h3,
+  .recuerdos-informacion h3,
+  .vuelos-informacion h3,
+  .JRPass-info h3,
+  .tipos-de-hoteles h3,
+  .tokio-informacion h3 {
+    padding: 30px 0px 30px 0px;
+    font-family: "oswald";
+    font-size: 28px; }
+  .libros-informacion p,
+  .canales-informacion p,
+  .informacion p,
+  .informacion-dinero p,
+  .matsuri-informacion p,
+  .comidas-informacion p,
+  .ciudades-informacion p,
+  .recuerdos-informacion p,
+  .vuelos-informacion p,
+  .JRPass-info p,
+  .tipos-de-hoteles p,
+  .tokio-informacion p {
+    padding-bottom: 10px; }
+
+@media screen and (max-width: 1024px) {
+  #seccionesprincipales {
+    margin-top: -100px;
+    grid-template-rows: 0.2fr 0.3fr; }
+    #seccionesprincipales h3 {
+      font-size: 1rem;
+      top: 70%; }
+    #seccionesprincipales img {
+      height: 170px;
+      width: 250px; }
+    #seccionesprincipales .tokio img {
+      height: 350px; }
+  .planifica-titulo {
+    margin-top: -100px;
+    font-size: 35px; }
+  #planifica .planifica__seccion {
+    margin-top: -10px; }
+    #planifica .planifica__seccion img {
+      width: 210px;
+      height: 200px;
+      border-radius: 100%; }
+    #planifica .planifica__seccion h5 {
+      font-size: 16px;
+      margin-top: -55px;
+      margin-left: -15px; }
+  .idioma_intro p {
+    padding: 0px 10px 0px 10px;
+    font-size: 18px; }
+  .idioma_intro img {
+    width: 400px;
+    height: 300px; }
+  #Idioma {
+    margin-top: 40px; }
+    #Idioma img {
+      width: 260px;
+      height: 250px;
+      border-radius: 100%; }
+    #Idioma h3 {
+      font-size: 25px; }
+  .contactanos {
+    font-size: 35px; }
+  .contactenos-container {
+    margin-left: 230px;
+    margin-top: 3%; }
+    .contactenos-container .texttarea {
+      width: 500px;
+      margin-left: 25px; }
+  .nosotros .nosotros_kioto {
+    padding: 0px 20px 0px 0px; } }
+
+@media screen and (max-width: 800px) {
+  /* Pagina principal */
+  header a {
+    font-size: 45px;
+    margin-top: 30px;
+    padding-left: 30px; }
+    header a img {
+      margin: 10px 20px 0px 20px;
+      width: 110px;
+      height: 110px; }
+  #seccionesprincipales {
+    margin-left: -7px;
+    height: 300px;
+    margin-top: 50px;
+    grid-row-gap: 10px; }
+    #seccionesprincipales h3 {
+      font-size: 14px;
+      top: 70%; }
+    #seccionesprincipales img {
+      height: 145px;
+      width: 170px; }
+    #seccionesprincipales article {
+      height: 145px;
+      width: 170px; }
+    #seccionesprincipales .tokio {
+      height: 300px;
+      width: 380px; }
+      #seccionesprincipales .tokio img {
+        height: 300px; }
+      #seccionesprincipales .tokio h3 {
+        font-family: "cabin";
+        font-size: 22px;
+        color: white; }
+  .planifica-titulo {
+    font-size: 20px;
+    margin-top: 20px; }
+  #planifica .planifica__seccion {
+    margin-top: -10px; }
+    #planifica .planifica__seccion img {
+      width: 160px;
+      height: 145px;
+      border-radius: 100%; }
+    #planifica .planifica__seccion h5 {
+      font-size: 14px;
+      margin-top: -50px;
+      margin-left: -40px; }
+  .nav-link {
+    font-size: 10px; }
+  .navbar {
+    height: 25px; }
+  footer {
+    height: 70px; }
+    footer h4 {
+      font-size: 10px;
+      margin-top: -100px; }
+  .nosotros h3 {
+    font-size: 20px; }
+  .nosotros .nosotros_kioto img {
+    width: 450px;
+    height: 450px; }
+  .nosotros .nosotros_kioto div {
+    margin-top: 50px;
+    padding: 0px 20px 0px 0px; }
+    .nosotros .nosotros_kioto div p {
+      text-align: center;
+      font-size: 12px; }
+  /* Regiones */
+  .Regiones .texto-inicio {
+    font-size: 20px; }
+  .Regiones p {
+    font-size: 12px;
+    padding: 0px 20px 0px 20px; }
+  .foto-regiones img {
+    width: 400px;
+    height: 400px; }
+  .foto-regiones p {
+    padding: 0px 20px 0px 10px;
+    font-size: 12px; }
+  table th {
+    height: 30px;
+    font-size: 12px; }
+  table td {
+    font-size: 12px; }
+  /* Seccion manga y anime (TABLET) */
+  .mangaanime_title h1 {
+    font-size: 20px;
+    padding: 20px 0px 20px 0px; }
+  .mangaanime_title p {
+    font-size: 14px; }
+  .anime_titulo {
+    font-size: 18px; }
+  .Anime p {
+    padding-right: 20px;
+    font-size: 14px; }
+  .Anime img {
+    width: 195px;
+    height: 170px; }
+  .manga_titulo {
+    font-size: 18px; }
+  .Manga p {
+    font-size: 14px; }
+  .Manga img {
+    width: 145px;
+    height: 170px; }
+  .animes_recomendados {
+    font-size: 18px;
+    margin-top: -10px; }
+  .recomendaciones h3 {
+    font-size: 18px; }
+  .recomendaciones p {
+    font-size: 14px; }
+  .BokuNoHero .Boku img {
+    height: 350px; }
+  .BokuNoHero .Boku p {
+    font-size: 14px; }
+  .TokyoRevengers .TokyoRev img {
+    height: 300px; }
+  .TokyoRevengers .TokyoRev p {
+    font-size: 14px; }
+  /* Seccion Idioma (TABLET) */
+  .idioma_intro h1 {
+    font-size: 20px; }
+  .idioma_intro p {
+    font-size: 14px; }
+  .idioma_intro img {
+    width: 300px;
+    height: 200px;
+    margin-left: 250px; }
+  #Idioma {
+    padding-bottom: 80px;
+    margin-top: 10px; }
+    #Idioma img {
+      width: 150px;
+      height: 130px;
+      border-radius: 100%; }
+    #Idioma h3 {
+      font-size: 25px; }
+  .contactenos-container {
+    width: 450px;
+    height: 750px;
+    margin-left: 200px;
+    margin-bottom: 150px; }
+    .contactenos-container .cuadrante-sup .cuadrantesup__titulo {
+      font-size: 14px;
+      padding-top: 20px; }
+    .contactenos-container .texttarea {
+      width: 430px;
+      margin-left: 10px; }
+  /* Seccion Conocenos (TABLET) */
+  .nosotros {
+    padding: 30px 0px 40px 10px; }
+  /* Seccion canales de youtube */
+  .canales-informacion {
+    padding: 30px 100px 100px 100px; }
+  .canales-inicio img {
+    width: 300px;
+    height: 300px; } }
+
+@media screen and (max-width: 576px) {
+  /* Pagina principal */
+  header a {
+    font-size: 35px;
+    margin-top: 30px;
+    padding-left: 10px; }
+    header a img {
+      margin: 10px 20px 0px 20px;
+      width: 110px;
+      height: 110px; }
+  #seccionesprincipales {
+    margin-top: 50px;
+    display: grid;
+    height: 600px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr 1fr; }
+    #seccionesprincipales h3 {
+      font-size: 14px;
+      top: 70%; }
+    #seccionesprincipales img {
+      height: 145px;
+      width: 250px; }
+    #seccionesprincipales article {
+      height: 145px;
+      width: 250px; }
+    #seccionesprincipales .tokio {
+      width: 100%;
+      grid-column: 1/3;
+      grid-row: 1/2; }
+      #seccionesprincipales .tokio img {
+        height: 300px;
+        width: auto; }
+      #seccionesprincipales .tokio h3 {
+        top: 40%;
+        font-family: "cabin";
+        font-size: 22px;
+        color: white; }
+    #seccionesprincipales .recomendados {
+      grid-column: 1/2;
+      grid-row: 2/3; }
+    #seccionesprincipales .noticias {
+      grid-column: 2/3;
+      grid-row: 2/3; }
+    #seccionesprincipales .Comidas {
+      grid-column: 1/2;
+      grid-row: 3/4; }
+    #seccionesprincipales .Info {
+      grid-column: 2/3;
+      grid-row: 3/4; }
+  .planifica-titulo {
+    font-size: 20px;
+    margin-top: 20px; }
+  #planifica .planifica__seccion {
+    margin-top: -10px; }
+    #planifica .planifica__seccion img {
+      width: 110px;
+      height: 95px;
+      border-radius: 50%; }
+    #planifica .planifica__seccion h5 {
+      font-size: 12px;
+      margin-top: -50px;
+      margin-left: -70px; }
+  .nav-link {
+    font-size: 10px; }
+  .nav-link:hover {
+    backface-visibility: hidden;
+    animation: 0s navbar 1; }
+  .navbar {
+    height: 40px;
+    z-index: 1001; }
+  .navbar-toggler .navbar-toggler-icon {
+    width: 10px;
+    height: 10px; }
+  footer {
+    height: 70px; }
+    footer h4 {
+      font-size: 10px;
+      margin-top: -30px; }
+  .nosotros h1 {
+    font-size: 20px; }
+  .nosotros .nosotros_kioto {
+    display: flex; }
+    .nosotros .nosotros_kioto img {
+      width: 450px;
+      height: 450px; }
+    .nosotros .nosotros_kioto div {
+      margin-top: 50px;
+      padding: 0px 20px 0px 0px; }
+      .nosotros .nosotros_kioto div p {
+        text-align: start;
+        font-size: 12px; }
+  /* Regiones */
+  .foto-regiones {
+    display: contents; }
+    .foto-regiones img {
+      margin-left: 80px;
+      width: 350px;
+      height: 350px; }
+    .foto-regiones p {
+      font-size: 12px; }
+  table th {
+    height: 30px;
+    font-size: 12px; }
+  table td {
+    font-size: 12px; }
+  /* Seccion manga y anime */
+  .recomendaciones .Jujutsu img,
+  .recomendaciones .kimetsu img,
+  .recomendaciones .shingeki img,
+  .recomendaciones .Boku img,
+  .recomendaciones .TokyoRev img {
+    width: 300px;
+    height: 300px; }
+  .recomendaciones h3 {
+    font-size: 18px; }
+  .recomendaciones p {
+    font-size: 12px; }
+  .recomendaciones .BokuNoHero .Boku img,
+  .recomendaciones .BokuNoHero .TokyoRev img,
+  .recomendaciones .TokyoRevengers .Boku img,
+  .recomendaciones .TokyoRevengers .TokyoRev img {
+    width: 300px;
+    height: 300px; }
+  .recomendaciones .BokuNoHero .Boku p,
+  .recomendaciones .BokuNoHero .TokyoRev p,
+  .recomendaciones .TokyoRevengers .Boku p,
+  .recomendaciones .TokyoRevengers .TokyoRev p {
+    font-size: 12px; }
+  /* Seccion Idioma  */
+  .idioma_intro img {
+    width: 300px;
+    height: 200px;
+    margin-left: 150px; }
+  #Idioma img {
+    width: 180px;
+    height: 150px;
+    border-radius: 50%; }
+  .contactanos {
+    font-size: 20px; }
+  .contactenos-container {
+    margin-left: 50px;
+    padding-bottom: 100px; }
+  .libros-informacion,
+  .canales-informacion,
+  .informacion,
+  .informacion-dinero,
+  .matsuri-informacion,
+  .comidas-informacion,
+  .ciudades-informacion,
+  .recuerdos-informacion,
+  .vuelos-informacion,
+  .JRPass-info,
+  .tipos-de-hoteles,
+  .tokio-informacion {
+    padding: 30px 100px 0px 50px; }
+    .libros-informacion img,
+    .canales-informacion img,
+    .informacion img,
+    .informacion-dinero img,
+    .matsuri-informacion img,
+    .comidas-informacion img,
+    .ciudades-informacion img,
+    .recuerdos-informacion img,
+    .vuelos-informacion img,
+    .JRPass-info img,
+    .tipos-de-hoteles img,
+    .tokio-informacion img {
+      width: 400px;
+      height: 310px; } }
