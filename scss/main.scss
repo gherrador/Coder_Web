@@ -1,0 +1,1666 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+/* Animaciones */
+
+@keyframes ms {
+    0% {
+        filter: opacity(0.5);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes navbar {
+    100% {
+        filter: opacity(0.5);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Variables */
+
+@import "variables";
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    background-color: $color-bg-principal;
+    a {
+        font-family: $letra-header;
+        color: white;
+        font-size: $header;
+        margin-top: 3%;
+        padding-left: 1%;
+        text-decoration: none;
+        &:hover {
+            color: white;
+        }
+    }
+    img {
+        margin: 0vw 3vw 0px 1vw;
+        width: 20%;
+        height: auto;
+    }
+}
+
+.error {
+    h1 {
+        font-family: $letra-titulos;
+        font-size: 3.5vw;
+        margin-left: 8%;
+        padding: 5% 0% 5% 0%;
+    }
+    img {
+        display: block;
+        margin: auto;
+        width: 50vw;
+        height: auto;
+    }
+}
+
+
+/* secciones principales de la pagina index */
+
+.conociendo-japon {
+    font-family: $letra-titulos;
+    font-size: $titulos;
+    color: black;
+    text-align: center;
+    padding: 40px 0px 60px 0px;
+}
+
+#seccionesprincipales {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-auto-rows: repeat(2, 1fr);
+    gap: 1%;
+    grid-row-gap: 3.5%;
+    align-content: center;
+    padding: 0px 10px 0px 10px;
+    .container-fluid {
+        padding-left: 0px;
+        padding-right: 0px
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        -webkit-text-stroke: 0.1px black;
+        &:hover {
+            color: white;
+        }
+    }
+    h3 {
+        font-size: $titulo-seccion + 0.2rem;
+        top: 70%;
+        text-align: center;
+        color: $color-letra-principal;
+        position: absolute;
+        padding: 0px 20px 0px 20px;
+    }
+    h2 {
+        font-size: $titulo-seccion + 1.5rem;
+    }
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        transition: all .9s ease;
+        &:hover {
+            filter: brightness(0.6);
+            transform: scale(1.2);
+        }
+    }
+    article {
+        display: block;
+        position: relative;
+        div {
+            overflow: hidden;
+        }
+    }
+    .tokio {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .recomendados {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .festivales {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .Comidas {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .Info {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+}
+
+
+/* Seccion planifica tu viaje */
+
+.planifica-titulo {
+    padding: 10px 0px 10px 0px;
+    font-family: $letra-anunciados;
+    font-size: $subtitulos;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#planifica {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    position: relative;
+    padding-top: 2%;
+    .planifica__seccion {
+        display: block;
+        position: relative;
+        a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: white;
+            }
+        }
+        img {
+            width: 90%;
+            height: 18vw;
+            max-width: 100%;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: space-evenly;
+            &:hover {
+                backface-visibility: hidden;
+                animation: 1s ms 1;
+            }
+        }
+        h3 {
+            position: absolute;
+            font-size: $titulo-seccion + 0.4rem;
+            margin-top: -25%;
+            margin-left: 32%;
+        }
+        h4 {
+            position: absolute;
+            font-size: $titulo-seccion + 0.4rem;
+            margin-top: -25%;
+            margin-left: 27%;
+        }
+    }
+}
+
+
+/* Estilo boton ir arriba */
+
+#buttonup {
+    width: 4vw;
+    height: 4vw;
+    background: $color-bg-principal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 3vw;
+    position: fixed;
+    bottom: 2vw;
+    right: 1vw;
+    cursor: pointer;
+    border: 0.5vw solid transparent;
+    transition: all 300ms ease;
+    transform: scale(0);
+    &:hover {
+        transform: scale(1.1);
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+    &.animate {
+        transform: scale(1);
+    }
+}
+
+#logo-movil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1001;
+    top: 1%;
+    left: -4%;
+    transform: scale(0);
+    img {
+        width: 30%;
+        border-radius: 50%;
+    }
+    &.animate {
+        transform: scale(1);
+    }
+}
+
+
+/* footer de la pagina */
+
+footer {
+    margin-top: 5%;
+    height: auto;
+    background-color: $color-bg-principal;
+    h4 {
+        color: $color-letra-principal;
+        font-family: $letra-cotenido;
+        padding: 2vw 1vw 2vw 0px;
+        text-align: end;
+        font-size: $contenido
+    }
+}
+
+
+/* Estilos de la seccion contactenos */
+
+.contactanos {
+    font-family: $letra-titulos;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    padding: 40px 0px 40px 0px;
+}
+
+.contactenos-container {
+    width: 37%;
+    height: auto;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+    padding-bottom: 5%;
+    .cuadrante-sup {
+        width: 100%;
+        height: 8vw;
+        border: 1px solid black;
+        background-color: $color-bg-principal;
+        .imagen__contacto {
+            width: 100%;
+            height: 100%;
+            margin-left: -1px;
+        }
+        .cuadrantesup__titulo {
+            text-align: center;
+            font-size: 1.6vw;
+            color: $color-letra-principal;
+            margin-top: -15%;
+            padding: 0% 15% 0% 15%;
+        }
+    }
+    .cuadrante-inf {
+        margin-top: 5%;
+        .form-group {
+            font-size: $contenido;
+            text-align: center;
+            padding: 10px 0px 10px 0px;
+        }
+        .sexo__enunciado {
+            font-size: $contenido;
+            text-align: center;
+        }
+        .sexo__opciones {
+            font-size: $contenido;
+            margin-left: 42%;
+        }
+        .opciones {
+            font-size: $contenido;
+            margin-left: 1%;
+        }
+        .opciones__titulo {
+            font-size: $contenido;
+        }
+        .titulo__comentarios {
+            font-size: $contenido;
+            text-align: center;
+        }
+        .btn-submit {
+            margin-left: 20%;
+            padding: 0px 10px 0px 10px;
+            font-size: 1.5rem;
+            width: 30%;
+            height: auto;
+        }
+        .btn-reset {
+            padding: 0px 10px 0px 10px;
+            font-size: 1.5rem;
+            width: 30%;
+            height: auto;
+        }
+         ::placeholder {
+            text-align: center;
+            color: red;
+            font-size: $contenido;
+        }
+        .texttarea {
+            width: 90%;
+            margin-left: 5%;
+        }
+    }
+}
+
+
+/* Estilos de la seccion Regiones */
+
+.Regiones {
+    .texto-inicio {
+        font-family: $letra-titulos;
+        margin-left: 35%;
+        margin-top: 1%;
+        font-size: $titulos;
+        padding: 2vw 0vw 2vw 0vw;
+    }
+    p {
+        font-size: $contenido;
+        margin-top: 3%;
+        padding: 0% 3% 0% 3%;
+    }
+}
+
+.foto-regiones {
+    margin-top: 5%;
+    display: flex;
+    padding-bottom: 3%;
+    p {
+        font-size: $contenido;
+        padding: 0% 3% 0% 3%;
+    }
+    img {
+        width: 40%;
+        height: 30%;
+        padding-left: 1%;
+    }
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    th {
+        text-align: center;
+        height: 4vw;
+        font-size: $contenido;
+        background-color: $color-bg-principal;
+        color: $color-letra-principal;
+    }
+    td {
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid $color-bg-principal;
+        font-size: $contenido;
+        width: auto;
+        padding: 0vw 1vw 0vw 1vw;
+    }
+    img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+
+/* Sección Idioma */
+
+.idioma_intro {
+    h1 {
+        font-family: $letra-titulos;
+        font-size: $titulos;
+        color: black;
+        text-align: center;
+        padding: 2% 0px 2% 0px;
+    }
+    img {
+        width: 40%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    p {
+        font-size: $contenido;
+        text-align: center;
+        padding: 2vw 0vw 2vw 0vw;
+    }
+}
+
+#Idioma {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 5%;
+    img {
+        width: 100%;
+        height: 55%;
+        border-radius: 50%;
+    }
+    img:hover {
+        animation: 1s aparecer;
+    }
+    h3 {
+        font-size: $subtitulos;
+        font-family: $letra-anunciados;
+        padding: 20px 0px 20px 0px;
+    }
+}
+
+
+/* Seccion quienes somos */
+
+.nosotros {
+    padding-top: 2vw;
+    h1 {
+        font-family: $letra-titulos;
+        font-size: $titulos;
+        text-align: center;
+    }
+    .nosotros_kioto {
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 35%;
+            height: 35%;
+            padding-right: 5%;
+            margin-left: 1%;
+        }
+        div {
+            margin-top: 8%;
+            p {
+                text-align: center;
+                font-size: $contenido;
+                padding: 1% 2% 0vw 0vw;
+            }
+        }
+    }
+}
+
+
+/* Seccion manga y anime */
+
+.animemanga-titulo {
+    h1 {
+        font-family: $letra-titulos;
+        font-size: $titulos;
+        text-align: center;
+        padding: 2% 0px 2% 0px;
+    }
+    p {
+        font-size: $contenido;
+        padding: 2% 4% 0vw 2%;
+    }
+}
+
+.animeymanga {
+    h3 {
+        font-size: $subtitulos;
+        font-family: $letra-anunciados;
+        padding: 5% 0% 5% 5%;
+    }
+    .Anime,
+    .Manga {
+        display: flex;
+        img {
+            margin-left: 2%;
+            width: 25%;
+            height: auto;
+        }
+        p {
+            font-size: $contenido;
+            padding: 0vw 2vw 0vw 2vw;
+        }
+    }
+}
+
+.animes_recomendados {
+    margin: 100px 0px 20px 0px;
+    text-align: center;
+    font-size: $subtitulos;
+    font-family: $letra-anunciados;
+    text-decoration: underline;
+}
+
+.recomendaciones {
+    img {
+        width: 40%;
+        height: auto;
+        padding: 2% 2% 2% 2%;
+    }
+    h3 {
+        padding: 4% 2% 0% 2%;
+        font-size: $subtitulos;
+    }
+    p {
+        font-size: $contenido;
+        padding: 0vw 5% 0vw 3%;
+        margin-top: 4vw;
+    }
+    .Jujutsu1 {
+        display: flex;
+    }
+    .Jujutsu2 {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .kimetsu1 {
+        display: flex;
+    }
+    .kimetsu2 {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .shingeki1 {
+        display: flex;
+    }
+    .shingeki2 {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .Boku {
+        display: flex;
+    }
+    .TokyoRev {
+        display: flex;
+    }
+}
+
+.nav-link {
+    color: white !important;
+    &:hover {
+        backface-visibility: hidden;
+        animation: 1s navbar 1;
+    }
+}
+
+.navbar {
+    background-color: $color-bg-principal;
+    font-size: $contenido;
+    z-index: 1000;
+    .container-fluid {
+        padding: 0px;
+    }
+}
+
+
+/* Estilo de secciones libros, canales, info, matsuri, comidas, ciudades, recuerdos, vuelos, JRPass, hoteles, tokio */
+
+.libros-inicio,
+.canales-inicio,
+.info-inicio,
+.matsuri-inicio,
+.comidas-inicio,
+.ciudades-inicio,
+.recuerdos-inicio,
+.vuelos-inicio,
+.JRPass-inicio,
+.hoteles-inicio,
+.tokio-inicio {
+    padding-top: 1%;
+    h1 {
+        font-family: $letra-titulos;
+        font-size: $titulos;
+        text-align: center;
+        padding: 3% 5% 4% 5%;
+    }
+    p {
+        padding: 0px 5% 0px 5%;
+        font-size: $contenido
+    }
+    img {
+        display: block;
+        margin: auto;
+        padding: 20px 0px 40px 0px;
+        width: 40%;
+        height: auto;
+    }
+}
+
+.libros-informacion,
+.canales-informacion,
+.informacion,
+.informacion-dinero,
+.matsuri-informacion,
+.comidas-informacion,
+.ciudades-informacion,
+.recuerdos-informacion,
+.vuelos-informacion,
+.JRPass-info,
+.tipos-de-hoteles,
+.tokio-informacion {
+    padding: 1vw 5vw 0px 5vw;
+    img {
+        width: 45%;
+        height: auto;
+        display: block;
+        margin: auto;
+        padding: 3% 0px 3% 0px;
+    }
+    h2 {
+        text-align: center;
+        padding: 3% 0px 3% 0px;
+        font-family: $letra-anunciados;
+        font-size: $subtitulos;
+        text-decoration: underline;
+    }
+    h3 {
+        padding: 3% 0px 2% 0px;
+        font-family: $letra-anunciados;
+        font-size: $subtitulos2;
+    }
+    p {
+        padding-bottom: 2%;
+        font-size: $contenido;
+    }
+}
+
+@media screen and (min-width: 993px)and (max-width: 1199px) {
+    #seccionesprincipales {
+        h3 {
+            top: 64%;
+            padding: 0px 5px 0px 3px;
+            font-size: $titulo-seccion - 0.1rem;
+        }
+    }
+    #planifica {
+        .planifica__seccion {
+            a {
+                color: white
+            }
+            img {
+                width: 130%;
+                height: 20vw;
+                border-radius: 50%;
+                margin-left: -6%;
+                padding: 0% 3% 0% 3%;
+            }
+            h3 {
+                margin: -30% 0% 0% 30%;
+                font-size: $titulo-seccion + 0.3rem;
+            }
+            h4 {
+                margin: -30% 0% 0% 20%;
+                font-size: $titulo-seccion + 0.3rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px)and (max-width: 992px) {
+    header {
+        a {
+            font-size: $header - 1.5rem;
+        }
+    }
+    #logo-movil {
+        visibility: hidden;
+    }
+    /* secciones principales de la pagina index */
+    .conociendo-japon {
+        font-size: $titulos - 0.5rem;
+    }
+    #seccionesprincipales {
+        padding: 0vw 3% 0vw 3%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-row-gap: 1%;
+        h2 {
+            font-size: $titulo-seccion + 1rem;
+        }
+        h3 {
+            font-size: $titulo-seccion + 0.5rem;
+            padding: 0% 6% 0% 8%;
+        }
+        .tokio {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        .recomendados {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .noticias {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .Comidas {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .Info {
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+    }
+    .planifica-titulo {
+        font-size: $subtitulos;
+    }
+    #planifica {
+        margin-left: 1%;
+        .planifica__seccion {
+            a {
+                color: white
+            }
+            img {
+                width: 130%;
+                height: 20vw;
+                border-radius: 50%;
+                margin-left: -6%;
+                padding: 0% 3% 0% 3%;
+            }
+            h3 {
+                margin: -30% 0% 0% 25%;
+                font-size: $titulo-seccion + 0.5rem;
+            }
+            h4 {
+                margin: -30% 0% 0% 15%;
+                font-size: $titulo-seccion + 0.5rem;
+            }
+        }
+    }
+    #buttonup {
+        width: 5%;
+        height: 7%;
+        font-size: 350%;
+        right: 3%;
+        bottom: 10%;
+    }
+    .nosotros {
+        h1 {
+            font-size: $titulos - 0.5rem;
+            padding-bottom: 3%;
+        }
+        .nosotros_kioto {
+            display: block;
+            img {
+                display: block;
+                margin: auto;
+                width: 60%;
+                height: auto
+            }
+            div {
+                p {
+                    padding: 0vw 4% 0vw 4%;
+                }
+            }
+        }
+    }
+    .Regiones {
+        .texto-inicio {
+            font-size: $titulos - 0.5rem;
+            margin-left: 25%;
+        }
+        p {
+            font-size: $contenido;
+            padding: 0% 2% 0% 2%;
+        }
+    }
+    .foto-regiones {
+        display: block;
+        p {
+            font-size: $contenido;
+            padding: 0% 4% 0% 4%;
+        }
+        img {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    }
+    table {
+        th {
+            font-size: $contenido;
+        }
+        td {
+            font-size: $contenido;
+        }
+        img {
+            width: 20vw;
+            height: 15vw;
+        }
+    }
+    .idioma_intro {
+        h1 {
+            font-size: $titulos - 0.5rem;
+        }
+        img {
+            width: 45vw;
+        }
+        p {
+            font-size: $contenido;
+            padding: 0vw 2vw 0vw 2vw;
+        }
+    }
+    #Idioma {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-top: 3vw;
+        img {
+            width: 35vw;
+            height: 30vw;
+        }
+        h3 {
+            font-size: $subtitulos;
+            font-family: $letra-anunciados;
+            padding: 20px 0px 20px 0px;
+        }
+    }
+    .contactanos {
+        font-family: $letra-titulos;
+        font-size: 40px;
+        color: black;
+        text-align: center;
+        padding: 40px 0px 40px 0px;
+    }
+    .contactenos-container {
+        width: 80vw;
+        .cuadrante-sup {
+            width: 100%;
+            height: 15vw;
+            .cuadrantesup__titulo {
+                text-align: center;
+                font-size: $contenido;
+                color: $color-letra-principal;
+                margin-top: -9vw;
+            }
+        }
+        .cuadrante-inf {
+            .form-group,
+            .sexo__enunciado,
+            .sexo__opciones,
+            .opciones,
+            .opciones__titulo,
+            .titulo__comentarios,
+            .btn-reset,
+            .btn-submit {
+                font-size: $contenido;
+            }
+             ::placeholder {
+                text-align: center;
+                color: red;
+                font-size: $contenido;
+            }
+            .btn-reset,
+            .btn-submit {
+                width: 25vw;
+                margin: auto;
+                display: block;
+            }
+            .texttarea {
+                width: 70vw;
+                margin-left: 1.5vw;
+            }
+        }
+    }
+    .animemanga-titulo {
+        h1 {
+            font-size: $titulos - 0.5rem;
+        }
+    }
+    .animeymanga {
+        h3 {
+            font-size: $subtitulos;
+            text-align: center;
+        }
+        .Anime,
+        .Manga {
+            display: block;
+            img {
+                margin-left: 23%;
+                width: 60%;
+                height: auto;
+                padding: 0% 0% 3% 0%;
+            }
+            p {
+                font-size: $contenido;
+            }
+        }
+    }
+    .animes_recomendados {
+        font-size: $subtitulos;
+    }
+    .recomendaciones {
+        img {
+            width: 70%;
+            padding: 2vw 2vw 2vw 2vw;
+            margin-left: 15%;
+        }
+        .Jujutsu1,
+        .Jujutsu2,
+        .Jujutsu3,
+        .kimetsu1,
+        .kimetsu2,
+        .shingeki1,
+        .shingeki2,
+        .Boku,
+        .TokyoRev {
+            display: block;
+        }
+    }
+    footer {
+        h4 {
+            font-size: $contenido;
+        }
+    }
+    /* Pagina principal */
+    .libros-inicio,
+    .canales-inicio,
+    .info-inicio,
+    .matsuri-inicio,
+    .comidas-inicio,
+    .ciudades-inicio,
+    .recuerdos-inicio,
+    .vuelos-inicio,
+    .JRPass-inicio,
+    .hoteles-inicio,
+    .tokio-inicio {
+        padding-top: 4vw;
+        h1 {
+            font-size: $titulos;
+        }
+        p {
+            padding: 0px 5vw 0px 5vw;
+            font-size: $contenido;
+        }
+        img {
+            width: 80vw;
+        }
+    }
+    .libros-informacion,
+    .canales-informacion,
+    .informacion,
+    .informacion-dinero,
+    .matsuri-informacion,
+    .comidas-informacion,
+    .ciudades-informacion,
+    .recuerdos-informacion,
+    .vuelos-informacion,
+    .JRPass-info,
+    .tipos-de-hoteles,
+    .tokio-informacion {
+        img {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px)and (min-width: 576px) {
+    header {
+        a {
+            font-size: $header - 3.5rem;
+        }
+    }
+    #logo-movil {
+        visibility: hidden;
+    }
+    .nav-link {
+        font-size: 1.3rem;
+    }
+    /* secciones principales de la pagina index */
+    .conociendo-japon {
+        font-size: $titulos - 1.5rem;
+    }
+    #seccionesprincipales {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-row-gap: 1%;
+        h2 {
+            font-size: $titulo-seccion + 1rem;
+        }
+        h3 {
+            font-size: $titulo-seccion - 0.1rem;
+            padding: 0% 6% 0% 8%;
+        }
+        .tokio {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        .recomendados {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .noticias {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .Comidas {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .Info {
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+    }
+    .planifica-titulo {
+        font-size: $subtitulos - 1rem;
+    }
+    #planifica {
+        margin-left: 1%;
+        .planifica__seccion {
+            img {
+                width: 90%;
+                height: 20vw;
+            }
+            h3 {
+                margin-top: -35%;
+                font-size: $titulo-seccion - 0.1rem;
+                margin-left: 24%;
+            }
+            h4 {
+                margin-top: -35%;
+                margin-left: 18%;
+                font-size: $titulo-seccion - 0.1rem;
+            }
+        }
+    }
+    #buttonup {
+        width: 7%;
+        height: 8%;
+        font-size: 300%;
+        right: 3%;
+        bottom: 10%;
+    }
+    .nosotros {
+        h1 {
+            font-size: $titulos - 1.5rem;
+            padding-bottom: 3%;
+        }
+        .nosotros_kioto {
+            display: block;
+            img {
+                display: block;
+                margin: auto;
+                width: 60%;
+                height: auto
+            }
+            div {
+                p {
+                    padding: 0vw 4% 0vw 4%;
+                }
+            }
+        }
+    }
+    .Regiones {
+        .texto-inicio {
+            font-size: $titulos - 1.5rem;
+            margin-left: 25%;
+        }
+        p {
+            font-size: $contenido;
+            padding: 0% 2% 0% 2%;
+        }
+    }
+    .foto-regiones {
+        display: block;
+        p {
+            font-size: $contenido;
+            padding: 0% 4% 0% 4%;
+        }
+        img {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    }
+    table {
+        th {
+            font-size: $contenido;
+        }
+        td {
+            font-size: $contenido;
+        }
+        img {
+            width: 20vw;
+            height: 15vw;
+        }
+    }
+    .idioma_intro {
+        h1 {
+            font-size: $titulos - 1.5rem;
+            padding-bottom: 5%;
+        }
+        img {
+            width: 60%;
+        }
+        p {
+            font-size: $contenido;
+            padding: 0vw 2% 2% 2%;
+        }
+    }
+    #Idioma {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-top: 3vw;
+        img {
+            width: 35vw;
+            height: 30vw;
+        }
+        h3 {
+            font-size: $subtitulos - 1rem;
+            font-family: $letra-anunciados;
+            padding: 20px 0px 20px 0px;
+        }
+    }
+    .contactanos {
+        font-family: $letra-titulos;
+        font-size: 40px;
+        color: black;
+        text-align: center;
+        padding: 40px 0px 40px 0px;
+    }
+    .contactenos-container {
+        width: 80vw;
+        .cuadrante-sup {
+            width: 100%;
+            height: 15vw;
+            .cuadrantesup__titulo {
+                text-align: center;
+                font-size: $contenido;
+                color: $color-letra-principal;
+                margin-top: -9vw;
+            }
+        }
+        .cuadrante-inf {
+            .form-group,
+            .sexo__enunciado,
+            .sexo__opciones,
+            .opciones,
+            .opciones__titulo,
+            .titulo__comentarios,
+            .btn-reset,
+            .btn-submit {
+                font-size: $contenido;
+            }
+             ::placeholder {
+                text-align: center;
+                color: red;
+                font-size: $contenido;
+            }
+            .btn-reset,
+            .btn-submit {
+                width: 25vw;
+                margin: auto;
+                display: block;
+            }
+            .texttarea {
+                width: 70vw;
+            }
+        }
+    }
+    .animemanga-titulo {
+        h1 {
+            font-size: $titulos - 1.5rem;
+        }
+    }
+    .animeymanga {
+        h3 {
+            font-size: $subtitulos - 1rem;
+            text-align: center;
+        }
+        .Anime,
+        .Manga {
+            display: block;
+            img {
+                margin-left: 23%;
+                width: 60%;
+                height: auto;
+                padding: 0% 0% 3% 0%;
+            }
+            p {
+                font-size: $contenido;
+            }
+        }
+    }
+    .animes_recomendados {
+        font-size: $subtitulos - 1rem;
+    }
+    .recomendaciones {
+        img {
+            width: 70%;
+            padding: 2vw 2vw 2vw 2vw;
+            margin-left: 20%;
+        }
+        h3 {
+            font-size: $subtitulos - 1.2rem;
+        }
+        .Jujutsu1,
+        .Jujutsu2,
+        .Jujutsu3,
+        .kimetsu1,
+        .kimetsu2,
+        .shingeki1,
+        .shingeki2,
+        .Boku,
+        .TokyoRev {
+            display: block;
+        }
+    }
+    footer {
+        h4 {
+            font-size: $contenido;
+        }
+    }
+    /* Pagina principal */
+    .libros-inicio,
+    .canales-inicio,
+    .info-inicio,
+    .matsuri-inicio,
+    .comidas-inicio,
+    .ciudades-inicio,
+    .recuerdos-inicio,
+    .vuelos-inicio,
+    .JRPass-inicio,
+    .hoteles-inicio,
+    .tokio-inicio {
+        padding-top: 4vw;
+        h1 {
+            font-size: $titulos - 1.5rem;
+        }
+        p {
+            padding: 0px 5vw 0px 5vw;
+            font-size: $contenido;
+        }
+        img {
+            width: 80%;
+        }
+    }
+    .libros-informacion,
+    .canales-informacion,
+    .informacion,
+    .informacion-dinero,
+    .matsuri-informacion,
+    .comidas-informacion,
+    .ciudades-informacion,
+    .recuerdos-informacion,
+    .vuelos-informacion,
+    .JRPass-info,
+    .tipos-de-hoteles,
+    .tokio-informacion {
+        img {
+            width: 80%;
+        }
+        h2 {
+            font-size: $subtitulos - 1.2rem;
+        }
+        ul {
+            font-size: $contenido;
+        }
+    }
+}
+
+@media screen and (max-width: 576px)and (min-width: 200px) {
+    footer {
+        h4 {
+            font-size: 1rem;
+        }
+    }
+    header {
+        margin-top: -2%;
+        a {
+            font-size: $header - 5.3rem;
+        }
+    }
+    .navbar {
+        height: 6%;
+        width: auto;
+        z-index: 1001;
+        .navbar-nav {
+            background-color: $color-bg-principal;
+            .nav-link {
+                font-size: 1rem;
+                margin-left: 2vw;
+                &:hover {
+                    backface-visibility: hidden;
+                    animation: 0s navbar 1;
+                }
+            }
+        }
+        .navbar-toggler {
+            display: block;
+            .navbar-toggler-icon {
+                width: 6vw;
+                height: 6vw;
+            }
+        }
+    }
+    /* secciones principales de la pagina index */
+    .conociendo-japon {
+        font-size: $titulos - 2.5rem;
+    }
+    #seccionesprincipales {
+        margin-top: -5%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-row-gap: 1%;
+        h2 {
+            font-size: $titulo-seccion;
+        }
+        h3 {
+            font-size: $titulo-seccion - 0.7rem;
+            padding: 0% 6% 0% 8%;
+            top: 50%
+        }
+        .tokio {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        .recomendados {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .noticias {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .Comidas {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .Info {
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+    }
+    .planifica-titulo {
+        font-size: $subtitulos - 1.5rem;
+    }
+    #planifica {
+        .planifica__seccion {
+            img {
+                width: 85%;
+                height: 20vw;
+                margin-left: -1%;
+            }
+            h3 {
+                margin-top: -50%;
+                font-size: $titulo-seccion - 0.7rem;
+                margin-left: 18%;
+            }
+            h4 {
+                margin-top: -50%;
+                margin-left: 5%;
+                font-size: $titulo-seccion - 0.7rem;
+            }
+        }
+    }
+    #buttonup {
+        width: 10vw;
+        height: 10vw;
+        font-size: 8vw;
+        bottom: 10vw;
+        right: 4vw;
+    }
+    .nosotros {
+        h1 {
+            font-size: $titulos - 2.5rem;
+            padding: 0% 1% 2% 1%
+        }
+        .nosotros_kioto {
+            display: block;
+            img {
+                display: block;
+                margin: auto;
+                width: 80%;
+                height: auto
+            }
+            div {
+                p {
+                    padding: 0vw 4% 0vw 4%;
+                }
+            }
+        }
+    }
+    .Regiones {
+        .texto-inicio {
+            font-size: $titulos - 2.5rem;
+            margin-left: 10%;
+        }
+        p {
+            font-size: $contenido - 0.2rem;
+            padding: 0% 2% 0% 2%;
+        }
+    }
+    .foto-regiones {
+        display: block;
+        p {
+            font-size: $contenido - 0.3rem;
+            padding: 0% 4% 0% 4%;
+        }
+        img {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    }
+    table {
+        th {
+            font-size: $contenido - 0.3rem;
+        }
+        td {
+            font-size: $contenido - 0.3rem;
+        }
+        img {
+            width: 20vw;
+            height: 15vw;
+        }
+    }
+    .idioma_intro {
+        h1 {
+            font-size: $titulos - 2.5rem;
+            padding-bottom: 5%;
+        }
+        img {
+            width: 60%;
+        }
+        p {
+            font-size: $contenido - 0.3rem;
+            padding: 0vw 2% 2% 2%;
+        }
+    }
+    #Idioma {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-top: 3vw;
+        img {
+            width: 35vw;
+            height: 30vw;
+        }
+        h3 {
+            font-size: $subtitulos - 1.5rem;
+            font-family: $letra-anunciados;
+            padding: 20px 0px 20px 0px;
+        }
+    }
+    .contactanos {
+        font-family: $letra-titulos;
+        font-size: $titulos - 2.5rem;
+        color: black;
+        text-align: center;
+        padding: 40px 0px 40px 0px;
+    }
+    .contactenos-container {
+        width: 80vw;
+        .cuadrante-sup {
+            width: 100%;
+            height: 15vw;
+            .cuadrantesup__titulo {
+                text-align: center;
+                font-size: $contenido - 0.3rem;
+                color: $color-letra-principal;
+                margin-top: -9vw;
+            }
+        }
+        .cuadrante-inf {
+            .form-group,
+            .sexo__enunciado,
+            .sexo__opciones,
+            .opciones,
+            .opciones__titulo,
+            .titulo__comentarios,
+            .btn-reset,
+            .btn-submit {
+                font-size: $contenido - 0.3rem;
+            }
+             ::placeholder {
+                text-align: center;
+                color: red;
+                font-size: $contenido - 0.3rem;
+            }
+            .btn-reset,
+            .btn-submit {
+                width: 25vw;
+                margin: auto;
+                display: block;
+            }
+            .texttarea {
+                width: 70vw;
+                margin-left: 6%;
+            }
+        }
+    }
+    .animemanga-titulo {
+        h1 {
+            font-size: $titulos - 2.5rem;
+        }
+    }
+    .animeymanga {
+        h3 {
+            font-size: $subtitulos - 1.2rem;
+            text-align: center;
+        }
+        .Anime,
+        .Manga {
+            display: block;
+            img {
+                margin-left: 23%;
+                width: 60%;
+                height: auto;
+                padding: 0% 0% 3% 0%;
+            }
+            p {
+                font-size: $contenido;
+            }
+        }
+    }
+    .animes_recomendados {
+        font-size: $subtitulos - 1.2rem;
+    }
+    .recomendaciones {
+        img {
+            width: 70%;
+            padding: 2vw 2vw 2vw 2vw;
+            margin-left: 15%;
+        }
+        h3 {
+            font-size: $subtitulos - 1.5rem;
+        }
+        p {
+            font-size: $contenido;
+        }
+        .Jujutsu1,
+        .Jujutsu2,
+        .Jujutsu3,
+        .kimetsu1,
+        .kimetsu2,
+        .shingeki1,
+        .shingeki2,
+        .Boku,
+        .TokyoRev {
+            display: block;
+        }
+    }
+    /* Pagina principal */
+    .libros-inicio,
+    .canales-inicio,
+    .info-inicio,
+    .matsuri-inicio,
+    .comidas-inicio,
+    .ciudades-inicio,
+    .recuerdos-inicio,
+    .vuelos-inicio,
+    .JRPass-inicio,
+    .hoteles-inicio,
+    .tokio-inicio {
+        padding-top: 4vw;
+        h1 {
+            font-size: $titulos - 2.5rem;
+        }
+        p {
+            padding: 0px 5vw 0px 5vw;
+            font-size: $contenido;
+        }
+        img {
+            width: 80%;
+        }
+    }
+    .libros-informacion,
+    .canales-informacion,
+    .informacion,
+    .informacion-dinero,
+    .matsuri-informacion,
+    .comidas-informacion,
+    .ciudades-informacion,
+    .recuerdos-informacion,
+    .vuelos-informacion,
+    .JRPass-info,
+    .tipos-de-hoteles,
+    .tokio-informacion {
+        img {
+            width: 80%;
+        }
+        h2 {
+            font-size: $subtitulos - 1.2rem;
+        }
+        p {
+            font-size: $contenido;
+        }
+        h3 {
+            font-size: $subtitulos - 1.5rem;
+        }
+        ul {
+            font-size: $contenido;
+        }
+    }
+    #logo-movil {
+        visibility: hidden;
+    }
+}
