@@ -681,6 +681,9 @@ table {
         padding-bottom: 2%;
         font-size: $contenido;
     }
+    ul {
+        font-size: $contenido;
+    }
 }
 
 @media screen and (min-width: 993px)and (max-width: 1199px) {
